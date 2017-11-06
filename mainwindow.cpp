@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <listaenlazada.h>
 #include <cola.h>
+#include <pila.h>
 #include <stdlib.h>
 #include <string.h>
 #include <iostream>
@@ -55,6 +56,26 @@ void MainWindow::on_pushButton_clicked()
    cola->Agregar_Cola("Luis", 36);
    cola->Agregar_Cola("Sol", 37);
    cola->Mostrar_Cola();
+   cola->Graficar_Cola();
+   QPixmap pixc("/home/debian9/Escritorio/ProyectoVacas/Cola.png");
+   ui->label_4->setPixmap(pixc);
+
+   Pila *pila = new Pila();
+   pila->Agregar_Pila("Guatemala",17);
+   pila->Agregar_Pila("Huehetenango",32);
+   pila->Agregar_Pila("San Marcos",30);
+   pila->Agregar_Pila("Quetzaltenango",24);
+   pila->Agregar_Pila("Quiche",21);
+   pila->Agregar_Pila("Suchitepequez",21);
+   pila->Agregar_Pila("Solola",19);
+   pila->Agregar_Pila("Alta Verapaz",17);
+   pila->Agregar_Pila("Santa Rosa",17);
+   pila->Mostrar_Pila();
+   pila->Graficar_Pila();
+   QPixmap pixp("/home/debian9/Escritorio/ProyectoVacas/Pila.png");
+   ui->label_5->setPixmap(pixp);
+
+
 
 
 

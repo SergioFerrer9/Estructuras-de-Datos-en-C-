@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     listaenlazada.cpp \
-    cola.cpp
+    cola.cpp \
+    pila.cpp
 
 HEADERS += \
         mainwindow.h \
     listaenlazada.h \
-    cola.h
+    cola.h \
+    pila.h
 
 FORMS += \
         mainwindow.ui

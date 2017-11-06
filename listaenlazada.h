@@ -15,7 +15,7 @@ struct NodoLista
 ///*************METODOS Y FUNCIONES LISTA SIMPLE***********
 struct Lista
 {
-    FILE *gra;
+
     void Agregar(char *nombre, int telefono);
     void Mostrar();
     void Graficar_Lista();

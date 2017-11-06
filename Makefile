@@ -53,11 +53,13 @@ OBJECTS_DIR   = ./
 SOURCES       = main.cpp \
 		mainwindow.cpp \
 		listaenlazada.cpp \
-		cola.cpp moc_mainwindow.cpp
+		cola.cpp \
+		pila.cpp moc_mainwindow.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		listaenlazada.o \
 		cola.o \
+		pila.o \
 		moc_mainwindow.o
 DIST          = ../../Qt/5.10.0/gcc_64/mkspecs/features/spec_pre.prf \
 		../../Qt/5.10.0/gcc_64/mkspecs/common/unix.conf \
@@ -243,10 +245,12 @@ DIST          = ../../Qt/5.10.0/gcc_64/mkspecs/features/spec_pre.prf \
 		../../Qt/5.10.0/gcc_64/mkspecs/features/lex.prf \
 		ProyectoVacas.pro mainwindow.h \
 		listaenlazada.h \
-		cola.h main.cpp \
+		cola.h \
+		pila.h main.cpp \
 		mainwindow.cpp \
 		listaenlazada.cpp \
-		cola.cpp
+		cola.cpp \
+		pila.cpp
 QMAKE_TARGET  = ProyectoVacas
 DESTDIR       = 
 TARGET        = ProyectoVacas
@@ -646,8 +650,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../Qt/5.10.0/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents mainwindow.h listaenlazada.h cola.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp mainwindow.cpp listaenlazada.cpp cola.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents mainwindow.h listaenlazada.h cola.h pila.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp mainwindow.cpp listaenlazada.cpp cola.cpp pila.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
 
@@ -1076,6 +1080,12 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../Qt/5.10.0/gcc_64/include/QtWidgets/qrubberband.h \
 		../../Qt/5.10.0/gcc_64/include/QtWidgets/QLabel \
 		../../Qt/5.10.0/gcc_64/include/QtWidgets/qlabel.h \
+		../../Qt/5.10.0/gcc_64/include/QtWidgets/QLineEdit \
+		../../Qt/5.10.0/gcc_64/include/QtWidgets/qlineedit.h \
+		../../Qt/5.10.0/gcc_64/include/QtGui/qtextcursor.h \
+		../../Qt/5.10.0/gcc_64/include/QtGui/qtextformat.h \
+		../../Qt/5.10.0/gcc_64/include/QtGui/qpen.h \
+		../../Qt/5.10.0/gcc_64/include/QtGui/qtextoption.h \
 		../../Qt/5.10.0/gcc_64/include/QtWidgets/QMenu \
 		../../Qt/5.10.0/gcc_64/include/QtWidgets/qmenu.h \
 		../../Qt/5.10.0/gcc_64/include/QtWidgets/QMenuBar \
@@ -1089,7 +1099,9 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../Qt/5.10.0/gcc_64/include/QtWidgets/QToolBar \
 		../../Qt/5.10.0/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../Qt/5.10.0/gcc_64/include/QtWidgets/QWidget \
-		listaenlazada.h
+		listaenlazada.h \
+		cola.h \
+		../../Qt/5.10.0/gcc_64/include/QtCore/QLine
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 listaenlazada.o: listaenlazada.cpp listaenlazada.h \
@@ -1207,6 +1219,9 @@ listaenlazada.o: listaenlazada.cpp listaenlazada.h \
 
 cola.o: cola.cpp cola.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cola.o cola.cpp
+
+pila.o: pila.cpp pila.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pila.o pila.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

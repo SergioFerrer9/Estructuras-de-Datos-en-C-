@@ -1,8 +1,6 @@
 #ifndef COLA_H
 #define COLA_H
-#include <stdlib.h>
-#include <iostream>
-#include <string.h>
+
 
 struct NodoCola
 {
@@ -13,7 +11,7 @@ struct NodoCola
 
 
 struct Cola{
-    FILE *gra;
+
     void Agregar_Cola(char *nombre, int edad);
     void Eliminar_Cola();
     void Mostrar_Cola();

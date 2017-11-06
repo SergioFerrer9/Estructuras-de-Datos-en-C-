@@ -44,7 +44,7 @@ void Cola::Eliminar_Cola(){
     }
 }
 
-///************MOSTRAR COLOA****************************************
+///************MOSTRAR COLA****************************************
 void Cola::Mostrar_Cola(){
     NodoC *aux=primeroc;
     cout<<"*******************COLA***********************"<<endl;
@@ -53,6 +53,83 @@ void Cola::Mostrar_Cola(){
         aux=aux->sig;
     }
 }
+
+///***********GRAFICAR COLA****************************************
+void Cola::Graficar_Cola(){
+    FILE *gra;
+    gra=fopen("Cola.dot","wt");
+    fputs("digraph g {  \n graph [\n",gra);
+    fputs("rankdir= \"LR\"\n];\n",gra);
+    fputs("node [\n" ,gra);
+    fputs("fontsize = \"16\"\n",gra);
+    fputs("shape = \"Mrecord\"\n",gra);
+    fputs("color=\"darkslateblue\"\n",gra);
+    fputs("style =\"filled, bold\"\n",gra);
+    fputs("];\n",gra);
+
+    int a=0;
+    NodoC *aux=primeroc;
+    while(aux!=NULL){
+        fputs("\"",gra);
+        fputs("node",gra);
+        fprintf(gra,"%d",a);
+        fputs("\"",gra);
+        fputs("\n[ ",gra);
+        fprintf(gra, "label=\" " );
+        fprintf(gra, "%s",aux->Nombre);
+        fputs("\"];\n",gra);
+        a++;
+
+
+            aux=aux->sig;
+    }
+
+    int b =0;
+    int c =b+1;
+    aux=primeroc;
+    while(aux->sig!=NULL){
+        // nodo1---->nodo2 siguintes
+        fputs("\"node",gra);
+        fprintf(gra,"%d",b);
+        fputs("\"-> \"node",gra);
+        fprintf(gra,"%d",c);
+        fputs( "\";\n",gra);
+
+
+            aux=aux->sig;
+            b++;
+            c++;
+    }
+
+
+
+
+
+         fputs("}",gra);
+         fclose(gra);
+         system("dot -Tpng Cola.dot -o Cola.png");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

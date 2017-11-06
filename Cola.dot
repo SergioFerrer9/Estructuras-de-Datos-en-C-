@@ -1,0 +1,40 @@
+digraph g {  
+ graph [
+rankdir= "LR"
+];
+node [
+fontsize = "16"
+shape = "Mrecord"
+color="darkslateblue"
+style ="filled, bold"
+];
+"node0"
+[ label=" Sol"];
+"node1"
+[ label=" Luis"];
+"node2"
+[ label=" Estopa"];
+"node3"
+[ label=" Judas"];
+"node4"
+[ label=" Samuel"];
+"node5"
+[ label=" Laura"];
+"node6"
+[ label=" Luna"];
+"node7"
+[ label=" Angel"];
+"node8"
+[ label=" Tomas"];
+"node9"
+[ label=" Sergio"];
+"node0"-> "node1";
+"node1"-> "node2";
+"node2"-> "node3";
+"node3"-> "node4";
+"node4"-> "node5";
+"node5"-> "node6";
+"node6"-> "node7";
+"node7"-> "node8";
+"node8"-> "node9";
+}
