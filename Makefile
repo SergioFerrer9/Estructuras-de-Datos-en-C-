@@ -54,12 +54,14 @@ SOURCES       = main.cpp \
 		mainwindow.cpp \
 		listaenlazada.cpp \
 		cola.cpp \
-		pila.cpp moc_mainwindow.cpp
+		pila.cpp \
+		lista_circular.cpp moc_mainwindow.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		listaenlazada.o \
 		cola.o \
 		pila.o \
+		lista_circular.o \
 		moc_mainwindow.o
 DIST          = ../../Qt/5.10.0/gcc_64/mkspecs/features/spec_pre.prf \
 		../../Qt/5.10.0/gcc_64/mkspecs/common/unix.conf \
@@ -246,11 +248,13 @@ DIST          = ../../Qt/5.10.0/gcc_64/mkspecs/features/spec_pre.prf \
 		ProyectoVacas.pro mainwindow.h \
 		listaenlazada.h \
 		cola.h \
-		pila.h main.cpp \
+		pila.h \
+		lista_circular.h main.cpp \
 		mainwindow.cpp \
 		listaenlazada.cpp \
 		cola.cpp \
-		pila.cpp
+		pila.cpp \
+		lista_circular.cpp
 QMAKE_TARGET  = ProyectoVacas
 DESTDIR       = 
 TARGET        = ProyectoVacas
@@ -650,8 +654,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../Qt/5.10.0/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents mainwindow.h listaenlazada.h cola.h pila.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp mainwindow.cpp listaenlazada.cpp cola.cpp pila.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents mainwindow.h listaenlazada.h cola.h pila.h lista_circular.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp mainwindow.cpp listaenlazada.cpp cola.cpp pila.cpp lista_circular.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
 
@@ -1101,6 +1105,7 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../Qt/5.10.0/gcc_64/include/QtWidgets/QWidget \
 		listaenlazada.h \
 		cola.h \
+		pila.h \
 		../../Qt/5.10.0/gcc_64/include/QtCore/QLine
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
@@ -1222,6 +1227,9 @@ cola.o: cola.cpp cola.h
 
 pila.o: pila.cpp pila.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pila.o pila.cpp
+
+lista_circular.o: lista_circular.cpp lista_circular.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o lista_circular.o lista_circular.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

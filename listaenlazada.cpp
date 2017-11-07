@@ -36,6 +36,7 @@ void Lista::Agregar(char *nombre, int telefono){
 ///***********************MOSTRAR LISTA SIMPLE**************************
 void Lista::Mostrar(){
     NodoL *aux=primero;
+    cout<<"*****************LISTA SIMPLE*************************\n";
     while(aux!=NULL){
         cout<<aux->Nombre<< " " <<aux->telefono<<endl;
         aux=aux->sig;

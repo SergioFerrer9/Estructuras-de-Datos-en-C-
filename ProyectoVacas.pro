@@ -28,13 +28,15 @@ SOURCES += \
         mainwindow.cpp \
     listaenlazada.cpp \
     cola.cpp \
-    pila.cpp
+    pila.cpp \
+    lista_circular.cpp
 
 HEADERS += \
         mainwindow.h \
     listaenlazada.h \
     cola.h \
-    pila.h
+    pila.h \
+    lista_circular.h
 
 FORMS += \
         mainwindow.ui

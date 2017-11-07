@@ -3,6 +3,7 @@
 #include <listaenlazada.h>
 #include <cola.h>
 #include <pila.h>
+#include <lista_circular.h>
 #include <stdlib.h>
 #include <string.h>
 #include <iostream>
@@ -75,6 +76,18 @@ void MainWindow::on_pushButton_clicked()
    QPixmap pixp("/home/debian9/Escritorio/ProyectoVacas/Pila.png");
    ui->label_5->setPixmap(pixp);
 
+   Lista_Circuar *Circular = new  Lista_Circuar();
+   Circular->Agregar_Circular("Mago de Oz","Finisterra","Santiago");
+   Circular->Agregar_Circular("Mago de Oz","Finisterra","Kelpie");
+   Circular->Agregar_Circular("Mago de Oz","Jesus de Chamberi","Genesis");
+   Circular->Agregar_Circular("Mago de Oz","Jesus de Chamberi","Angel Caido");
+   Circular->Agregar_Circular("Mago de Oz","Jesus de Chamberi","Judas");
+   Circular->Agregar_Circular("Tierra Santa","Legendario","Atlantida");
+   Circular->Agregar_Circular("Tierra Santa","Tierra de","La tormenta");
+   Circular->Agregar_Circular("Rata Blanca","Magos","El ada y el mago");
+   Circular->Agregar_Circular("Saratoga","Morir en el bien ","Como el viento");
+   Circular->Mostrar_Circular();
+   Circular->Graficar_Circular();
 
 
 

@@ -45,7 +45,7 @@ void Pila::Eliminar_Pila(){
 ///************MOSTRAR PILA***************************************
 void Pila::Mostrar_Pila(){
     NodoP *aux=primerop;
-    cout<<"*********************PILA****************************";
+    cout<<"*********************PILA****************************\n";
     while(aux!=NULL){
         cout<<aux->Departamento<<"--"<<aux->Municipios<<endl;
         aux=aux->sig;

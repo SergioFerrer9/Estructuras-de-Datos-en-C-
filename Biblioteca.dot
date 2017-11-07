@@ -1,0 +1,69 @@
+digraph g {  
+ graph [
+rankdir= "LR"
+];
+node [
+fontsize = "16"
+shape = "Mrecord"
+color="darkslateblue"
+style ="filled, bold"
+];
+"node0"
+[ label=" Mago de Oz"];
+"node0Finisterra"
+[ label=" Finisterra"];
+"node0Jesus de Chamberi"
+[ label=" Jesus de Chamberi"];
+"node1"
+[ label=" Tierra Santa"];
+"node1Legendario"
+[ label=" Legendario"];
+"node1Tierra de"
+[ label=" Tierra de"];
+"node2"
+[ label=" Rata Blanca"];
+"node2Magos"
+[ label=" Magos"];
+"node3"
+[ label=" Saratoga"];
+"node3Morir en el bien "
+[ label=" Morir en el bien "];
+"node0"-> "node1";
+"node1"-> "node0";
+"node0Finisterra"-> "node0Jesus de Chamberi";
+"node0Jesus de Chamberi"-> "node0Finisterra";
+"node0Jesus de Chamberi"-> "NULL0";
+"node1"-> "node2";
+"node2"-> "node1";
+"node1Legendario"-> "node1Tierra de";
+"node1Tierra de"-> "node1Legendario";
+"node1Tierra de"-> "NULL1";
+"node2"-> "node3";
+"node3"-> "node2";
+"node2Magos"-> "NULL2";
+"node3Morir en el bien "-> "NULL3";
+"node0"-> "node3";
+"node3"-> "node0";
+"node0"-> "node0Finisterra";
+"node1"-> "node1Legendario";
+"node2"-> "node2Magos";
+"node3"-> "node3Morir en el bien ";
+"node0Santiago"
+[ label=" Santiago"];
+"node1Genesis"
+[ label=" Genesis"];
+"node2Atlantida"
+[ label=" Atlantida"];
+"node3La tormenta"
+[ label=" La tormenta"];
+"node4El ada y el mago"
+[ label=" El ada y el mago"];
+"node5Como el viento"
+[ label=" Como el viento"];
+"node0Finisterra"-> "node0Santiago";
+"node0Jesus de Chamberi"-> "node1Genesis";
+"node1Legendario"-> "node2Atlantida";
+"node1Tierra de"-> "node3La tormenta";
+"node2Magos"-> "node4El ada y el mago";
+"node3Morir en el bien "-> "node5Como el viento";
+}
