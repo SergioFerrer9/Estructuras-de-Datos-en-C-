@@ -50,6 +50,11 @@ public:
     QWidget *scrollAreaWidgetContents_2;
     QGridLayout *gridLayout_4;
     QLabel *label_5;
+    QWidget *tab_4;
+    QScrollArea *scrollArea_4;
+    QWidget *scrollAreaWidgetContents_3;
+    QGridLayout *gridLayout_5;
+    QLabel *label_6;
     QPushButton *pushButton_2;
     QLabel *label_2;
     QLabel *label_3;
@@ -100,8 +105,6 @@ public:
         gridLayout_2->addWidget(scrollArea, 0, 0, 1, 1);
 
         tabWidget->addTab(tab, QString());
-        scrollArea->raise();
-        label->raise();
         tab_2 = new QWidget();
         tab_2->setObjectName(QStringLiteral("tab_2"));
         scrollArea_2 = new QScrollArea(tab_2);
@@ -142,6 +145,26 @@ public:
 
         scrollArea_3->setWidget(scrollAreaWidgetContents_2);
         tabWidget->addTab(tab_3, QString());
+        tab_4 = new QWidget();
+        tab_4->setObjectName(QStringLiteral("tab_4"));
+        scrollArea_4 = new QScrollArea(tab_4);
+        scrollArea_4->setObjectName(QStringLiteral("scrollArea_4"));
+        scrollArea_4->setGeometry(QRect(9, 9, 491, 311));
+        scrollArea_4->setWidgetResizable(true);
+        scrollAreaWidgetContents_3 = new QWidget();
+        scrollAreaWidgetContents_3->setObjectName(QStringLiteral("scrollAreaWidgetContents_3"));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 489, 309));
+        gridLayout_5 = new QGridLayout(scrollAreaWidgetContents_3);
+        gridLayout_5->setSpacing(6);
+        gridLayout_5->setContentsMargins(11, 11, 11, 11);
+        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
+        label_6 = new QLabel(scrollAreaWidgetContents_3);
+        label_6->setObjectName(QStringLiteral("label_6"));
+
+        gridLayout_5->addWidget(label_6, 0, 0, 1, 1);
+
+        scrollArea_4->setWidget(scrollAreaWidgetContents_3);
+        tabWidget->addTab(tab_4, QString());
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         pushButton_2->setGeometry(QRect(20, 140, 131, 23));
@@ -175,7 +198,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -191,6 +214,8 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Cola", nullptr));
         label_5->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Pila", nullptr));
+        label_6->setText(QString());
+        tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("MainWindow", "Biblioteca", nullptr));
         pushButton_2->setText(QApplication::translate("MainWindow", "Agregar a Cola", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "Nombre", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "Edad", nullptr));

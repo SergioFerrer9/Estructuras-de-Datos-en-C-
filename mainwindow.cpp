@@ -88,12 +88,8 @@ void MainWindow::on_pushButton_clicked()
    Circular->Agregar_Circular("Saratoga","Morir en el bien ","Como el viento");
    Circular->Mostrar_Circular();
    Circular->Graficar_Circular();
-
-
-
-
-
-
+   QPixmap pixcir("/home/debian9/Escritorio/ProyectoVacas/Biblioteca.png");
+   ui->label_6->setPixmap(pixcir);
 
 }
 
